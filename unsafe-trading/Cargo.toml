@@ -1,0 +1,19 @@
+[package]
+name = "unsafe-trading"
+authors = ["Ruan Petterson <ruan.petterson@ripio.com>"]
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+colored = "~2.0"
+indexmap = "~1.8"
+serde = { version = "~1.0", features = ["derive", "unstable"], optional = true }
+serde_json = { version = "~1.0", optional = true }
+
+[dev-dependencies]
+rand = "~0.8"
+
+[features]
+serde = ["dep:serde", "dep:serde_json", "indexmap/serde"]

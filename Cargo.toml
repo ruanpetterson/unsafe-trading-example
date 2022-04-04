@@ -1,0 +1,3 @@
+[workspace]
+members = ["unsafe-trading"]
+default-members = ["unsafe-trading"]
